@@ -22,7 +22,13 @@ A snippet of it is shown in the diagram below; however, the script file is in th
 
 ![](Dany's_db.JPG)
 
-![]()
+![](db2.JPG)
+
+I tried to use the join-date table initially created and it was conflicting with the 'JOIN' function in SQL. I renamed the table to join_date instead and the query is shown below.
+
+![](db3.JPG)
+
+
 ## Case Study Questions and Solutions
 #### Q1. What is the total amount each customer spent at the restraunt?
 To answer this question, I joined the sales and menu table since the information we need is found in these two tables.
