@@ -22,6 +22,7 @@ A snippet of it is shown in the diagram below; however, the script file is in th
 
 ![](Dany's_db.JPG)
 
+![]()
 ## Case Study Questions and Solutions
 #### Q1. What is the total amount each customer spent at the restraunt?
 To answer this question, I joined the sales and menu table since the information we need is found in these two tables.
@@ -63,5 +64,46 @@ Q6. Which item was purchased first by the customer after they became a member?
 Here, we created a temporary table called purchase table and joined the original 3 tables; sales, menu and members.
 
 ![](Q6.JPG)
+
+In the purchase_table, we ranked the partition of customer_id which was ordered it by the order date. We then selected customer_id, product_name, the join_date and order date from the purchase_table where the rank was 1. The ranking was done in ascending order of date hence, rank 1 is the earliest item purchased by the customers.
+
+Q7. Which item was purchased just before the person became a member?
+Here, we used a similar query as used in question 6 above, However, we are looking at products purchased before the customers became a member of the loyalty program (that is; order_date < join_date).
+
+![](Q7.JPG)
+
+Q8. What is the total items and amount spent for each member before they became a member
+All three tables were joined. 
+
+![](Q8.JPG)
+
+Here, customer_id was selected, counted the number of products as the total items purchased and found the sum of the products purchased. This was done on only orders that were made before the customers became members of the program (order_date < join_date). I then grouped by customers.
+
+Q9. If each $1 spent equates to 10 points and sushi has 2x points multiplier-how many points would each customer have?
+Here, we make use of the CASE statement and joined 2 tables; sales and menu.
+
+![](Q9.JPG)
+
+In the above query, a case statment was made to find points accumulated by customers based on their purchase. It made an exception for when a product is a 'sushi', here, the point is doubled. 
+
+Q10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi- 
+how many points do customer A and B have at the end of January?
+Here, we join all three tables; sales, members and menu tables and made use of case statements as well. 
+
+![](Q10.JPG)
+
+In the above query, let's begin with the case statement. The CASE statement within the SUM function calculates the number of points earned by each sale, based on the order date and the customer's join date. If the order was placed within the first week of the customer's membership (join_date), then the points earned are multiplied by 2, otherwise the points are multiplied by 1.
+The where clause limits us to only sales made in January. We then select all details needed from the tables.
+
+##Some Insights Made 
+1. Danny's restraunt has only 3 customers. 
+2. Out of these three customers, 2 have joined the customer loyalty program proposed by Danny.
+3. The tree customers have been consistent in their buying from the restraunt although they don't buy everyday.
+4. The most purchased food is 'ramen'. 
+5. The customer loyalty program will greatly benefit the restraunt. 
+   Knowing customer data gives you a leverage over competitors who do not utilize their cutsomer data.
+   For example; knowing that the customers love 'ramen' dish, more dishes similar to 'ramen' can be introduced to give variety yet same delicious taste.
+   
+# THANK YOU. 
 
 
