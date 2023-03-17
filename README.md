@@ -18,7 +18,7 @@ He plans on using these insights to help him decide whether he should expand the
 
 ## Challenge Encountered
 There was a ready-to-work query editor to use as part of the sql challenge. However, I encountered a lot of problems with using that online editor. I decided to use SQL Server Management Studio. The database wasn't readily available on SQL server so a Danny Ma database was created in SQL Server before proceeding with the case study questions. 
-A snippet of it is shown in the diagram below; however, the script file is in this repository.
+A snippet of it is shown in the diagram below; however, find the script file here :point_right: https://github.com/Alberda1612/SQL-CHALLENGE/blob/main/danny's_dinner_database.sql
 
 ![](Dany's_db.JPG)
 
@@ -110,6 +110,7 @@ The where clause limits us to only sales made in January. We then select all det
    Knowing customer data gives you a leverage over competitors who do not utilize their cutsomer data.
    For example; knowing that the customers love 'ramen' dish, more dishes similar to 'ramen' can be introduced to give variety yet same delicious taste.
    
-# THANK YOU. 
+  A link to the script file is here :point_right: https://github.com/Alberda1612/SQL-CHALLENGE/blob/main/Danny_Challenge_1.sql 
+# THANK YOU :smile: . 
 
 
